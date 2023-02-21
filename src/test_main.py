@@ -6,9 +6,7 @@ from flask.testing import FlaskClient
 
 @pytest.fixture()
 def app() -> Flask:
-    app = main.app
-    app.config.update({'TESTING': True})
-    return app
+    return main.app
 
 
 @pytest.fixture()
