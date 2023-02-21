@@ -1,12 +1,12 @@
-from flask import Flask
+from quart import Quart
 import os
 
 
-app = Flask(__name__)
+app = Quart(__name__)
 
 
 @app.route('/')
-def hello_world():
+async def hello_world():
     return 'Hello, World!'
 
 
