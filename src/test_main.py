@@ -1,6 +1,7 @@
 import pytest
 import main
-from flask.testing import Flask, FlaskClient
+from flask import Flask
+from flask.testing import FlaskClient
 
 
 @pytest.fixture()
