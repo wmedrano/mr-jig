@@ -24,5 +24,7 @@ jobs:
           pip install -r requirements.txt
       - name: Run type checker.
         run: mypy ./
+      - name: Run linter.
+        run: autopep8 src -r --diff
       - name: Run tests.
         run: pytest
