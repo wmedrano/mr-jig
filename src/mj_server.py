@@ -1,7 +1,4 @@
 import asyncio
-import os
-import threading
-import dotenv
 import logging
 from quart import Quart
 
