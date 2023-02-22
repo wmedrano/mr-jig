@@ -1,12 +1,12 @@
 import pytest
-import main
+from src import mj_server
 import quart
 
 
 @pytest.fixture()
 def app() -> quart.Quart:
-    main.app.testing = True
-    return main.app
+    mj_server.app.testing = True
+    return mj_server.app
 
 
 @pytest.fixture()
