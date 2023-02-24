@@ -1,4 +1,3 @@
-import asyncio
 import logging
 from quart import Quart
 
@@ -13,4 +12,4 @@ async def hello_world():
 
 def run(port: int):
     logger.info(f"Starging Quart server on port {port}.")
-    asyncio.run(app.run_task(port=port, debug=False))
+    app.run(port=port, debug=False)
