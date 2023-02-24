@@ -1,15 +1,15 @@
-from flask import Flask
+from . import mj_server
 import os
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
-app = Flask(__name__)
-
-
-@app.route('/')
-def hello_world():
-    return 'Hello, World!'
+def main():
+    port = int(os.getenv('PORT', 21894))
+    mj_server.run(port=port)
 
 
 if __name__ == '__main__':
-    port = int(os.getenv('PORT', '21894'))
-    app.run(host='0.0.0.0', port=port)
+    main()
